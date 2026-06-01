@@ -6,35 +6,35 @@
     <title>TechWear Shop — Registrarse</title>
     <link rel="icon" href="../img/logo/icon.png" type"image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/general.css" />
   </head>
   <body>
-    <div class="site-container">
-      <header class="site-header">
-        <div class="container header-inner">
-          <a class="brand" href="../index.html"
+    <div>
+      <header>
+        <div>
+          <a href="../index.html"
             ><img src="../img/logo/logo.png" alt="logo de TechWear Shop" /> TechWear
             Shop</a
           >
           <nav aria-label="Principal">
-            <ul class="nav">
+            <ul>
               <li><a href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
               <li>
                 <a href="cart.html"
                   ><i class="fa-solid fa-cart-shopping"></i> Carrito</a
                 >
               </li>
-              <li><a href="login.html" class="btn btn-ghost"><i class="fa-solid fa-user"></i> Ingresar</a></li>
+              <li><a href="login.html"><i class="fa-solid fa-user"></i> Ingresar</a></li>
             </ul>
           </nav>
         </div>
       </header>
 
-      <main class="container">
-        <section class="register-card">
+      <main>
+        <section>
           <h2>Crear una cuenta</h2>
-          <hr class="divider" />
-          <form action="login.html" method="get" class="form-grid">
+          <hr />
+          <form action="login.html" method="get">
             <div>
               <label for="first">Nombre</label>
               <input id="first" name="first" type="text" required />
@@ -67,16 +67,16 @@
               <input id="confirm" name="confirm" type="password" required />
             </div>
 
-            <div class="full">
+            <div>
               <label for="company">Empresa</label>
               <input id="company" name="company" type="text" />
             </div>
 
-            <div class="full">
+            <div>
               <label for="address1">Dirección 1</label>
               <input id="address1" name="address1" type="text" />
             </div>
-            <div class="full">
+            <div>
               <label for="address2">Dirección 2</label>
               <input id="address2" name="address2" type="text" />
             </div>
@@ -110,30 +110,26 @@
               <input id="dob" name="dob" type="date" />
             </div>
             
-            <div class="full">
-              <label
-                ><input type="checkbox" name="newsletter" /> Suscribirse al
-                boletín</label
-              >
+            <div>
+              <label><input type="checkbox" name="newsletter" /> Suscribirse al
+                boletín</label>
             </div>
 
-            <div class="full">
-              <label
-                ><input type="checkbox" name="terms" required /> Acepto los
-                términos y la política de privacidad</label
-              >
+            <div>
+              <label><input type="checkbox" name="terms" required /> Acepto los
+                términos y la política de privacidad</label>
             </div>
 
-            <div class="full">
-              <button class="btn" type="submit">Crear cuenta</button>
+            <div style="text-align: center; margin-top: 16px;">
+              <button type="submit">Crear cuenta</button>
             </div>
           </form>
-          <hr class="divider" />
+          <hr />
         </section>
       </main>
 
-      <footer class="site-footer">
-        <div class="container">
+      <footer>
+        <div>
           <p>&copy; 2026 TechWear Shop. All rights reserved.</p>
         </div>
       </footer>

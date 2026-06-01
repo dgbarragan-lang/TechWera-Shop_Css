@@ -6,34 +6,34 @@
     <title>TechWear Shop — Iniciar sesión</title>
     <link rel="icon" href="../img/logo/icon.png" type"image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/general.css" />
   </head>
   <body>
-    <div class="site-container">
-      <header class="site-header">
-        <div class="container header-inner">
-          <a class="brand" href="../index.html"
+    <div>
+      <header>
+        <div>
+          <a href="../index.html"
             ><img src="../img/logo/logo.png" alt="logo de TechWear Shop" /> TechWear
             Shop</a
           >
           <nav aria-label="Principal">
-            <ul class="nav">
+            <ul>
               <li><a href="../index.html"> <i class="fa-solid fa-house"></i> Inicio</a></li>
               <li>
                 <a href="cart.html"
                   ><i class="fa-solid fa-cart-shopping"></i> Carrito</a
                 >
               </li>
-              <li><a href="login.html" class="btn btn-ghost"><i class="fa-solid fa-user"></i> Ingresar</a></li>
+              <li><a href="login.html"><i class="fa-solid fa-user"></i> Ingresar</a></li>
             </ul>
           </nav>
         </div>
       </header>
 
-      <main class="container login-page">
-        <section class="login-card" aria-labelledby="signin-title">
+      <main>
+        <section aria-labelledby="signin-title">
           <h2 id="signin-title">Inicia sesión en tu cuenta</h2>
-          <hr class="divider" />
+          <hr />
           <form action="../index.html" method="post">
             <label for="email">Correo electrónico</label>
             <input
@@ -52,18 +52,20 @@
               placeholder="••••••••"
               required
             />
-
-            <button class="btn" type="submit">Iniciar sesión</button>
+            <div style="text-align: center; margin-top: 16px;">
+              <button type="submit">Iniciar sesión</button>
+            </div>
+            
           </form>
-          <hr class="divider" />
-          <p class="small muted">
+          <hr />
+          <p>
             ¿No tienes cuenta? <a href="register.html">Crear cuenta</a>
           </p>
         </section>
       </main>
 
-      <footer class="site-footer">
-        <div class="container">
+      <footer>
+        <div>
           <p>&copy; 2026 TechWear Shop. All rights reserved.</p>
         </div>
       </footer>

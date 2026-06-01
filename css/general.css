@@ -1,0 +1,318 @@
+/* ============================================================
+   BLOQUE 1: CONFIGURACIÓN GENERAL
+   Selector universal, body, fuente, fondo, color e interlineado.
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f1720;
+    color: #e6eef6;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   BLOQUE 2: TÍTULOS, PÁRRAFOS Y ENLACES
+   Estilos para h1, h2, h3, p, a y a:hover.
+   ============================================================ */
+
+h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+    color: #e6eef6;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+    color: #dbeafe;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.8rem;
+    color: #cbd5e1;
+}
+
+p {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+i {
+    font-size: 1rem;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+a i,
+button i,
+nav i {
+    font-size: 1rem;
+}
+
+/* ============================================================
+   BLOQUE 3: ELEMENTOS SEMÁNTICOS PRINCIPALES
+   Estilos para header, nav, main, section, article, aside y footer.
+   ============================================================ */
+
+header {
+    background-color: #111827;
+    padding: 18px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+nav ul {
+    justify-content: center;
+}
+
+main {
+    margin: 0 auto;
+    padding: 24px 16px;
+    max-width: 1100px;
+}
+
+section,
+article,
+aside {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    margin-bottom: 24px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #111827;
+    padding: 18px 16px;
+    margin-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+footer h4,
+footer p,
+footer a {
+    margin: 0;
+}
+
+/* ============================================================
+   BLOQUE 4: MENÚ DE NAVEGACIÓN
+   Estilos para nav, nav a y nav a:hover.
+   ============================================================ */
+
+nav {
+    margin-top: 12px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 14px;
+    color: #e6eef6;
+    background-color: rgba(59, 130, 246, 0.18);
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    border-radius: 10px;
+}
+
+nav a:hover {
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+/* ============================================================
+   BLOQUE 5: CONTENIDO Y SECCIONES
+   Estilos para main, section, article y aside.
+   ============================================================ */
+
+main h1,
+main h2,
+main h3 {
+    text-align: left;
+}
+
+section {
+    overflow: hidden;
+}
+
+article {
+    overflow: hidden;
+}
+
+aside {
+    overflow: hidden;
+}
+
+/* ============================================================
+   BLOQUE 6: IMÁGENES
+   Estilos para img.
+   ============================================================ */
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    border-radius: 4px;
+    border: none;
+    margin-right: 8px;
+}
+
+/* ============================================================
+   BLOQUE 7: LISTAS
+   Estilos para ul, ol y li.
+   ============================================================ */
+
+ul,
+ol {
+    margin: 1rem 0 1rem 1.25rem;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   BLOQUE 8: FORMULARIOS
+   Estilos para form, label, input, textarea, select y button.
+   ============================================================ */
+
+form {
+    margin: 1.5rem 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #e6eef6;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #3b82f6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+/* ============================================================
+   BLOQUE 9: TABLAS
+   Estilos para table, thead, tbody, tr, th y td.
+   ============================================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+thead {
+    background-color: rgba(59, 130, 246, 0.12);
+}
+
+th,
+td {
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: left;
+}
+
+thead th {
+    color: #dbeafe;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================================
+   BLOQUE 10: PIE DE PÁGINA
+   Estilos para footer, footer p y footer address.
+   ============================================================ */
+
+footer p,
+footer address {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin: 0;
+}
