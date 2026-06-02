@@ -316,3 +316,178 @@ footer address {
     font-size: 0.95rem;
     margin: 0;
 }
+
+/* ============================================================
+   BLOQUE 11: MULTIMEDIA AVANZADA
+   Estilos para figure, figcaption, video, audio e iframe.
+   ============================================================ */
+
+figure {
+    margin: 20px auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-top: 8px;
+}
+
+video,
+audio,
+iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 12px auto;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+video {
+    height: auto;
+    max-height: 360px;
+}
+
+audio {
+    width: 100%;
+    max-width: 500px;
+}
+
+iframe {
+    min-height: 240px;
+}
+
+/* ============================================================
+   BLOQUE 12: FORMULARIOS AVANZADOS
+   Estilos para inputs especiales, focus y controles reset.
+   ============================================================ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    height: auto;
+}
+
+input[type="time"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+select {
+    color: #e6eef6;
+}
+
+button[type="reset"] {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #e6eef6;
+    margin-left: 8px;
+}
+
+button[type="reset"]:hover {
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #3b82f6;
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+input:required,
+select:required,
+textarea:required {
+    border-left: 3px solid #3b82f6;
+}
+
+/* ============================================================
+   BLOQUE 13: TABLAS AVANZADAS
+   Estilos adicionales para caption, hover y filas pares.
+   ============================================================ */
+
+caption {
+    font-weight: bold;
+    color: #dbeafe;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+thead th {
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================================
+   BLOQUE 14: DETALLE, RESUMEN Y AVANCE
+   Estilos para details, summary, progress y meter.
+   ============================================================ */
+
+details {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.03);
+    margin: 24px auto;
+    max-width: 1100px;
+}
+
+summary {
+    font-weight: bold;
+    color: #e6eef6;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+progress,
+meter {
+    width: 100%;
+    max-width: 260px;
+    height: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================================
+   BLOQUE 15: TEXTO TÉCNICO
+   Estilos para code, pre y kbd.
+   ============================================================ */
+
+code,
+kbd {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #dbeafe;
+}
+
+pre {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 10px;
+    color: #e6eef6;
+    overflow-x: auto;
+}
