@@ -4,43 +4,62 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>TechWear Shop — Inicio</title>
-    <link rel="icon" href="img/logo/icon.png" type"image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="img/logo/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <div>
       <header>
         <div>
           <a href="index.html"
-            ><img src="img/logo/logo.png" alt="logo de TechWear Shop" /> TechWear
-            Shop</a
+            ><img src="img/logo/logo.png" alt="logo de TechWear Shop" />
+            TechWear Shop</a
           >
           <nav aria-label="Principal">
             <ul>
-              <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
               <li>
-                <a href="pages/cart.html"
-                  ><i class="fa-solid fa-cart-shopping"></i>  Carrito
-                  </a
+                <a class="active" href="index.html"
+                  ><i class="fa-solid fa-house"></i> Inicio</a
                 >
               </li>
-              <li><a href="pages/login.html"><i class="fa-solid fa-user"></i> Ingresar</a></li>
+              <li>
+                <a href="pages/cart.html"
+                  ><i class="fa-solid fa-cart-shopping"></i> Carrito
+                </a>
+              </li>
+              <li>
+                <a href="pages/login.html"
+                  ><i class="fa-solid fa-user"></i> Ingresar</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
       </header>
 
-      <aside style="text-align: center">
+      <aside class="social-icons">
         <h2>
-        <i class="fa-solid fa-house"></i> <!-- Casa -->
-        <i class="fa-solid fa-user"></i> <!-- Usuario -->
-        <i class="fa-solid fa-envelope"></i> <!-- Correo -->
-        <i class="fa-solid fa-phone"></i> <!-- Teléfono -->
-        <i class="fa-solid fa-cart-shopping"></i> <!-- Carrito -->
-        <i class="fa-solid fa-heart"></i> <!-- Corazón -->
-        <i class="fa-brands fa-facebook"></i> <!-- Facebook -->
-        <i class="fa-brands fa-instagram"></i> <!-- Instagram -->
+          <i class="fa-solid fa-house"></i>
+          <!-- Casa -->
+          <i class="fa-solid fa-user"></i>
+          <!-- Usuario -->
+          <i class="fa-solid fa-envelope"></i>
+          <!-- Correo -->
+          <i class="fa-solid fa-phone"></i>
+          <!-- Teléfono -->
+          <i class="fa-solid fa-cart-shopping"></i>
+          <!-- Carrito -->
+          <i class="fa-solid fa-heart"></i>
+          <!-- Corazón -->
+          <i class="fa-brands fa-facebook"></i>
+          <!-- Facebook -->
+          <i class="fa-brands fa-instagram"></i>
+          <!-- Instagram -->
         </h2>
       </aside>
       <nav aria-label="Categorías">
@@ -56,14 +75,14 @@
       </nav>
 
       <main>
-        <section>
-          <div>
+        <section id="hero">
+          <div class="card-secondary">
             <h1>Bienvenido a TechWear Shop</h1>
             <p>
-              Descubre los últimos productos tecnológicos con ofertas exclusivas y
-              envíos rápidos
+              Descubre los últimos productos tecnológicos con ofertas exclusivas
+              y envíos rápidos
             </p>
-            <ul>
+            <ul class="hero-list">
               <li>Envíos rápidos</li>
               <li>Productos de calidad</li>
               <li>Soporte 24/7</li>
@@ -71,9 +90,9 @@
           </div>
         </section>
 
-        <section aria-labelledby="featured-title">
+        <section id="featured-products" aria-labelledby="featured-title">
           <h2 id="featured-title">Productos destacados</h2>
-          <div>
+          <div class="product-table">
             <table>
               <thead>
                 <tr>
@@ -86,60 +105,94 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><img src="img/Carrito/mac.jpg" alt="MacBook Pro"/></td>
+                  <td><img src="img/Carrito/mac.jpg" alt="MacBook Pro" /></td>
                   <td>Portátiles</td>
                   <td>MacBook Pro 16"</td>
                   <td>$2499</td>
-                  <td><button>Añadir al carrito</button></td>
+                  <td>
+                    <button class="btn-primary">Añadir al carrito</button>
+                  </td>
                 </tr>
                 <tr>
-                  <td><img src="img/Carrito/dell.jpg" alt="Dell XPS"/></td>
+                  <td><img src="img/Carrito/dell.jpg" alt="Dell XPS" /></td>
                   <td>Portátiles</td>
                   <td>Dell XPS 15</td>
                   <td>$1899</td>
-                  <td><button>Añadir al carrito</button></td>
+                  <td>
+                    <button class="btn-primary">Añadir al carrito</button>
+                  </td>
                 </tr>
                 <tr>
-                  <td><img src="img/Carrito/raton.jpg" alt="Wireless Mouse"/></td>
+                  <td>
+                    <img src="img/Carrito/raton.jpg" alt="Wireless Mouse" />
+                  </td>
                   <td>Accesorios</td>
                   <td>Wireless Mouse MX Master</td>
                   <td>$99</td>
-                  <td><button>Añadir al carrito</button></td>
+                  <td>
+                    <button class="btn-primary">Añadir al carrito</button>
+                  </td>
                 </tr>
                 <tr>
-                  <td><img src="img/Carrito/teclado.jpg" alt="Mechanical Keyboard"/></td>
+                  <td>
+                    <img
+                      src="img/Carrito/teclado.jpg"
+                      alt="Mechanical Keyboard"
+                    />
+                  </td>
                   <td>Accesorios</td>
                   <td>Mechanical Keyboard RGB</td>
                   <td>$149</td>
-                  <td><button>Añadir al carrito</button></td>
+                  <td>
+                    <button class="btn-primary">Añadir al carrito</button>
+                  </td>
                 </tr>
                 <tr>
-                  <td><img src="img/Carrito/monitor.jpg" alt="27 inch monitor"/></td>
+                  <td>
+                    <img src="img/Carrito/monitor.jpg" alt="27 inch monitor" />
+                  </td>
                   <td>Monitores</td>
                   <td>27" 4K Monitor</td>
                   <td>$599</td>
-                  <td><button>Añadir al carrito</button></td>
+                  <td>
+                    <button class="btn-primary">Añadir al carrito</button>
+                  </td>
                 </tr>
                 <tr>
-                  <td><img src="img/Carrito/adaptador.jpg" alt="USB-C Hub"/></td>
+                  <td>
+                    <img src="img/Carrito/adaptador.jpg" alt="USB-C Hub" />
+                  </td>
                   <td>Accesorios</td>
                   <td>USB-C Hub 7-in-1</td>
                   <td>$79</td>
-                  <td><button>Añadir al carrito</button></td>
+                  <td>
+                    <button class="btn-primary">Añadir al carrito</button>
+                  </td>
                 </tr>
                 <tr>
-                  <td><img src="img/Carrito/auriculares.jpg" alt="Gaming Headset"/></td>
+                  <td>
+                    <img
+                      src="img/Carrito/auriculares.jpg"
+                      alt="Gaming Headset"
+                    />
+                  </td>
                   <td>Audio</td>
                   <td>Gaming Headset Pro</td>
                   <td>$199</td>
-                  <td><button>Añadir al carrito</button></td>
+                  <td>
+                    <button class="btn-primary">Añadir al carrito</button>
+                  </td>
                 </tr>
                 <tr>
-                  <td><img src="img/Carrito/stand.jpg" alt="Laptop Stand"/></td>
+                  <td>
+                    <img src="img/Carrito/stand.jpg" alt="Laptop Stand" />
+                  </td>
                   <td>Accesorios</td>
                   <td>Laptop Stand Aluminum</td>
                   <td>$49</td>
-                  <td><button>Añadir al carrito</button></td>
+                  <td>
+                    <button class="btn-primary">Añadir al carrito</button>
+                  </td>
                 </tr>
               </tbody>
             </table>

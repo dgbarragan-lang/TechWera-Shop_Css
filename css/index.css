@@ -1,0 +1,136 @@
+/* ============================================================
+   BLOQUE 1: PRESENTACIÓN PRINCIPAL
+   Estilos propios de la página principal.
+   ============================================================ */
+
+#hero {
+    background: linear-gradient(135deg, rgba(59,130,246,0.16), rgba(15,23,40,0.95));
+    padding: 40px 24px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(15, 23, 40, 0.45);
+}
+
+#hero h1 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+#hero p {
+    max-width: 760px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.05rem;
+    color: #dbeafe;
+}
+
+#hero .hero-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    list-style: none;
+    margin-top: 1.5rem;
+    padding: 0;
+}
+
+#hero .hero-list li {
+    background-color: rgba(59,130,246,0.12);
+    border: 1px solid rgba(59,130,246,0.28);
+    border-radius: 12px;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+#featured-products {
+    padding-top: 10px;
+}
+
+#featured-products h2 {
+    color: #93c5fd;
+    border-color: #93c5fd;
+}
+
+#featured-products .product-table {
+    overflow-x: auto;
+    border-radius: 16px;
+}
+
+#featured-products table {
+    min-width: 720px;
+}
+
+#featured-products button {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background-color: #2563eb;
+}
+
+#featured-products button:hover {
+    background-color: #1d4ed8;
+}
+
+/* ============================================================
+   BLOQUE 2: TARJETAS
+   Estilos reutilizables mediante clases.
+   ============================================================ */
+
+.card-secondary {
+    background-color: rgba(255,255,255,0.04);
+    border: 1px solid rgba(59,130,246,0.24);
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background-color: rgba(59,130,246,0.14);
+    color: #bfdbfe;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    color: #fff;
+    border: 1px solid #2563eb;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: rgba(255,255,255,0.08);
+    color: #e6eef6;
+    border: 1px solid rgba(255,255,255,0.14);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255,255,255,0.12);
+}
+
+/* ============================================================
+   BLOQUE 3: FORMULARIOS Y DETALLES
+   Estilos específicos de una página.
+   ============================================================ */
+
+#hero .info-note {
+    font-size: 0.95rem;
+    color: #c7d2fe;
+    margin-top: 18px;
+}
+
+.product-table th,
+.product-table td {
+    padding: 14px 18px;
+}
+
+.product-table tbody tr:hover {
+    background-color: rgba(59,130,246,0.08);
+}

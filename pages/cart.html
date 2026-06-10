@@ -4,64 +4,75 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>TechWear Shop — Carrito</title>
-    <link rel="icon" href="../img/logo/icon.png" type"image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="../img/logo/icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
   </head>
   <body>
     <div>
       <header>
         <div>
           <a href="../index.html"
-            ><img src="../img/logo/logo.png" alt="logo de TechWear Shop" /> TechWear
-            Shop</a
+            ><img src="../img/logo/logo.png" alt="logo de TechWear Shop" />
+            TechWear Shop</a
           >
           <nav aria-label="Principal">
             <ul>
-              <li><a href="../index.html"> <i class="fa-solid fa-house"></i> Inicio</a></li>
               <li>
-                <a href="cart.html"
-                  ><i class="fa-solid fa-cart-shopping"></i>  Carrito
-                  </a
+                <a href="../index.html">
+                  <i class="fa-solid fa-house"></i> Inicio</a
                 >
               </li>
-              <li><a href="login.html"><i class="fa-solid fa-user"></i> Ingresar</a></li>
+              <li>
+                <a class="active" href="cart.html"
+                  ><i class="fa-solid fa-cart-shopping"></i> Carrito
+                </a>
+              </li>
+              <li>
+                <a href="login.html"
+                  ><i class="fa-solid fa-user"></i> Ingresar</a
+                >
+              </li>
             </ul>
           </nav>
         </div>
       </header>
 
-      <main>
-        <div>
-        <h2>Carrito de compras</h2>
-        <label>Progreso del pedido</label>
-        <progress value="33" max="100"></progress>
-        <p>33% completo</p>
-        <label> Selecciona tu ubicación </label>
-
-                <button>
-                    <a href="https://www.google.com/maps" target="_blank"
-                    style="text-decoration: none; color: #f2f2f2;">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </a>
-                </button>
+      <main id="cart-page">
+        <div id="cart-header">
+          <h2>Carrito de compras</h2>
+          <label>Progreso del pedido</label>
+          <progress value="33" max="100"></progress>
+          <p>33% completo</p>
+          <div id="cart-location">
+            <span>Selecciona tu ubicación</span>
+            <a
+              class="btn-icon"
+              href="https://www.google.com/maps"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </a>
+          </div>
         </div>
-                <br>
+        <br />
         <div>
           <section>
-            <article>
+            <article class="cart-product">
               <div>
-                <img
-                src="../img/Carrito/dell.jpg"
-                alt="Dell XPS 15"
-                />
+                <img src="../img/Carrito/dell.jpg" alt="Dell XPS 15" />
               </div>
               <div>
                 <h3>Dell XPS 15</h3>
                 <p>Portátiles</p>
                 <p>$1899</p>
               </div>
-              <div aria-label="Cantidad">
+              <div aria-label="Cantidad" class="quantity-control">
                 <button>-</button>
                 <span>1</span>
                 <button>+</button>
@@ -69,7 +80,7 @@
             </article>
           </section>
 
-          <aside>
+          <aside class="cart-summary">
             <h3>Resumen del pedido</h3>
             <dl>
               <div>
@@ -82,10 +93,12 @@
               </div>
               <div>
                 <dt>Total</dt>
-                <dd>$2088.90</dd>
+                <dd class="total">$2088.90</dd>
               </div>
             </dl>
-            <button>Proceder al pago</button>
+            <div id="cart-footer">
+              <button>Proceder al pago</button>
+            </div>
           </aside>
         </div>
       </main>

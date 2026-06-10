@@ -1,0 +1,90 @@
+/* ============================================================
+   BLOQUE 1: PÁGINA DE REGISTRO
+   Estilos propios de la página de registro.
+   ============================================================ */
+
+#signup-panel {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px 26px;
+    border-radius: 24px;
+    background-color: rgba(15,23,40,0.96);
+    border: 1px solid rgba(59,130,246,0.22);
+}
+
+#signup-panel h2 {
+    text-align: center;
+    margin-bottom: 14px;
+    color: #dbeafe;
+}
+
+#signup-panel hr {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 24px 0;
+}
+
+/* ============================================================
+   BLOQUE 2: FORMULARIO REUTILIZABLE
+   Estilos reutilizables mediante clases.
+   ============================================================ */
+
+.register-form {
+    display: grid;
+    gap: 18px;
+}
+
+.register-form .form-row {
+    display: grid;
+    gap: 8px;
+}
+
+.register-form .form-row-inline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.register-form .checkbox-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.register-form button {
+    width: 100%;
+    max-width: 280px;
+    justify-self: center;
+    padding: 12px 18px;
+    border-radius: 14px;
+    background-color: #3b82f6;
+}
+
+.register-form button:hover {
+    background-color: #2563eb;
+}
+
+/* ============================================================
+   BLOQUE 3: ESTADOS DE ENTRADA
+   Estilos específicos de la página.
+   ============================================================ */
+
+#signup-panel label {
+    color: #cbd5e1;
+}
+
+#signup-panel input,
+#signup-panel select {
+    background-color: rgba(255,255,255,0.04);
+}
+
+#signup-panel input:focus,
+#signup-panel select:focus {
+    border-color: #60a5fa;
+}
+
+#signup-panel .help-text {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}

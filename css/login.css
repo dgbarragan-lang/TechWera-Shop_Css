@@ -1,0 +1,81 @@
+/* ============================================================
+   BLOQUE 1: PÁGINA DE INICIO DE SESIÓN
+   Estilos propios de la página de inicio de sesión.
+   ============================================================ */
+
+#sign-in-panel {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    border-radius: 22px;
+    background: rgba(15,23,40,0.96);
+    border: 1px solid rgba(59,130,246,0.22);
+}
+
+#sign-in-panel h2 {
+    text-align: center;
+    color: #dbeafe;
+}
+
+#sign-in-panel hr {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 18px 0;
+}
+
+/* ============================================================
+   BLOQUE 2: FORMULARIOS
+   Estilos reutilizables mediante clases.
+   ============================================================ */
+
+.auth-form {
+    display: grid;
+    gap: 16px;
+}
+
+.auth-form .form-group {
+    display: grid;
+    gap: 8px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 14px;
+    background-color: #3b82f6;
+}
+
+.auth-form button:hover {
+    background-color: #2563eb;
+}
+
+.form-note {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.form-link {
+    color: #bfdbfe;
+}
+
+.form-link:hover {
+    color: #93c5fd;
+}
+
+/* ============================================================
+   BLOQUE 3: ESTADOS Y ACCESIBILIDAD
+   Estilos específicos de la página.
+   ============================================================ */
+
+#sign-in-panel label {
+    color: #cbd5e1;
+}
+
+#sign-in-panel input {
+    background-color: rgba(255,255,255,0.04);
+}
+
+#sign-in-panel input:focus {
+    border-color: #60a5fa;
+}

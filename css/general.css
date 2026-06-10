@@ -157,6 +157,12 @@ nav a {
     border-radius: 10px;
 }
 
+nav a.active {
+    background-color: #1d4ed8;
+    color: #fff;
+    border-color: #1e40af;
+}
+
 nav a:hover {
     background-color: #3b82f6;
     color: #fff;
@@ -507,4 +513,93 @@ pre {
     border-radius: 10px;
     color: #e6eef6;
     overflow-x: auto;
+}
+
+/* ============================================================
+   BLOQUE 16: RESPONSIVIDAD
+   Ajustes para pantallas de 700px o menos.
+   ============================================================ */
+
+@media (max-width: 700px) {
+    header > div,
+    footer > div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    header > div {
+        gap: 12px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        padding: 18px 12px;
+    }
+
+    section,
+    article,
+    aside,
+    details {
+        padding: 16px;
+        margin-bottom: 18px;
+    }
+
+    img,
+    header img {
+        width: auto;
+        max-width: 100%;
+    }
+
+    table,
+    .product-table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    th,
+    td {
+        padding: 10px 12px;
+    }
+
+    ul,
+    ol {
+        margin-left: 1rem;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    form {
+        margin: 1rem 0;
+    }
+
+    input,
+    textarea,
+    select,
+    button {
+        font-size: 0.97rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
 }
