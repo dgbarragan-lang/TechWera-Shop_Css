@@ -1,6 +1,7 @@
 /* ============================================================
    BLOQUE 1: CONFIGURACIÓN GENERAL
    Selector universal, body, fuente, fondo, color e interlineado.
+   Aplicación del Box Model: box-sizing, margin, padding.
    ============================================================ */
 
 * {
@@ -9,11 +10,18 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0f1720;
     color: #e6eef6;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ============================================================
@@ -289,7 +297,79 @@ button:hover {
 }
 
 /* ============================================================
-   BLOQUE 9: TABLAS
+   Estilos para table, tr, th y td.
+   ============================================================ */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+thead {
+    background-color: rgba(59, 130, 246, 0.12);
+}
+
+th {
+    padding: 12px 16px;
+    text-align: left;
+    color: #dbeafe;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.25);
+}
+
+td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #cbd5e1;
+}
+
+/* ============================================================
+   BLOQUE 10: UTILITY CLASSES
+   Clases reutilizables para margenes, paddings, gaps.
+   ============================================================ */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.gap-sm { gap: 8px; }
+.gap-md { gap: 14px; }
+.gap-lg { gap: 20px; }
+
+.p-xs { padding: 4px; }
+.p-sm { padding: 8px; }
+.p-md { padding: 14px; }
+.p-lg { padding: 20px; }
+
+.m-sm { margin: 8px; }
+.m-md { margin: 14px; }
+.m-lg { margin: 20px; }
+
+.mb-xs { margin-bottom: 4px; }
+.mb-sm { margin-bottom: 8px; }
+.mb-md { margin-bottom: 14px; }
+.mb-lg { margin-bottom: 20px; }
    Estilos para table, thead, tbody, tr, th y td.
    ============================================================ */
 

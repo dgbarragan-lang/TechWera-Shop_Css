@@ -1,6 +1,6 @@
 /* ============================================================
-   BLOQUE 1: PRESENTACIÓN PRINCIPAL
-   Estilos propios de la página principal.
+   BLOQUE 1: SECCIÓN HERO (BIENVENIDA)
+   Estilos de la sección principal con Box Model y Grid.
    ============================================================ */
 
 #hero {
@@ -8,12 +8,14 @@
     padding: 40px 24px;
     border-radius: 20px;
     box-shadow: 0 12px 30px rgba(15, 23, 40, 0.45);
+    margin-bottom: 32px;
 }
 
 #hero h1 {
     font-size: clamp(2rem, 3vw, 3rem);
     margin-bottom: 0.75rem;
     letter-spacing: 0.02em;
+    text-align: center;
 }
 
 #hero p {
@@ -21,8 +23,10 @@
     margin: 0 auto 1.5rem;
     font-size: 1.05rem;
     color: #dbeafe;
+    text-align: center;
 }
 
+/* GRID: Lista de beneficios con diseño responsivo */
 #hero .hero-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -30,6 +34,7 @@
     list-style: none;
     margin-top: 1.5rem;
     padding: 0;
+    width: 100%;
 }
 
 #hero .hero-list li {
@@ -38,40 +43,13 @@
     border-radius: 12px;
     padding: 14px 16px;
     text-align: center;
-}
-
-#featured-products {
-    padding-top: 10px;
-}
-
-#featured-products h2 {
-    color: #93c5fd;
-    border-color: #93c5fd;
-}
-
-#featured-products .product-table {
-    overflow-x: auto;
-    border-radius: 16px;
-}
-
-#featured-products table {
-    min-width: 720px;
-}
-
-#featured-products button {
-    width: 100%;
-    padding: 10px 14px;
-    border-radius: 10px;
-    background-color: #2563eb;
-}
-
-#featured-products button:hover {
-    background-color: #1d4ed8;
+    color: #bfdbfe;
+    font-weight: 500;
 }
 
 /* ============================================================
-   BLOQUE 2: TARJETAS
-   Estilos reutilizables mediante clases.
+   BLOQUE 2: TARJETA SECUNDARIA
+   Estilos de tarjetas reutilizables con Box Model.
    ============================================================ */
 
 .card-secondary {
@@ -79,7 +57,96 @@
     border: 1px solid rgba(59,130,246,0.24);
     border-radius: 18px;
     padding: 18px;
+    box-shadow: 0 4px 12px rgba(15, 23, 40, 0.25);
 }
+
+.card-secondary:hover {
+    background-color: rgba(255,255,255,0.06);
+    border-color: rgba(59,130,246,0.35);
+}
+
+/* ============================================================
+   BLOQUE 3: SECCIÓN DE PRODUCTOS DESTACADOS
+   Estilos para tabla de productos con Box Model.
+   ============================================================ */
+
+#featured-products {
+    padding-top: 10px;
+    margin-bottom: 32px;
+}
+
+#featured-products h2 {
+    color: #93c5fd;
+    border-color: #93c5fd;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de la tabla con scroll responsivo */
+#featured-products .product-table {
+    overflow-x: auto;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 20px;
+}
+
+#featured-products table {
+    min-width: 720px;
+    width: 100%;
+}
+
+#featured-products th {
+    background-color: rgba(59, 130, 246, 0.12);
+    padding: 14px 18px;
+    text-align: left;
+    color: #dbeafe;
+    font-weight: 700;
+}
+
+#featured-products td {
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#featured-products tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+#featured-products tbody tr:hover {
+    background-color: rgba(59,130,246,0.08);
+}
+
+/* Estilos de imágenes en tabla */
+#featured-products img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(59, 130, 246, 0.16);
+}
+
+#featured-products button {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background-color: #2563eb;
+    border: 1px solid #1d4ed8;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#featured-products button:hover {
+    background-color: #1d4ed8;
+    border-color: #1e40af;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+/* ============================================================
+   BLOQUE 4: BADGES Y ETIQUETAS
+   Estilos para elementos destacados.
+   ============================================================ */
 
 .badge {
     display: inline-flex;
@@ -91,46 +158,62 @@
     color: #bfdbfe;
     font-size: 0.95rem;
     margin-bottom: 10px;
+    border: 1px solid rgba(59, 130, 246, 0.22);
 }
+
+/* ============================================================
+   BLOQUE 5: BOTONES
+   Estilos primarios y secundarios para botones.
+   ============================================================ */
 
 .btn-primary {
     background-color: #3b82f6;
     color: #fff;
     border: 1px solid #2563eb;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 500;
 }
 
 .btn-primary:hover {
     background-color: #2563eb;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
 }
 
 .btn-secondary {
     background-color: rgba(255,255,255,0.08);
     color: #e6eef6;
     border: 1px solid rgba(255,255,255,0.14);
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 .btn-secondary:hover {
     background-color: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.22);
 }
 
 /* ============================================================
-   BLOQUE 3: FORMULARIOS Y DETALLES
-   Estilos específicos de una página.
+   BLOQUE 6: NOTAS E INFORMACIÓN
+   Estilos para elementos informativos.
    ============================================================ */
 
 #hero .info-note {
     font-size: 0.95rem;
     color: #c7d2fe;
     margin-top: 18px;
+    padding: 12px 16px;
+    border-left: 3px solid #3b82f6;
+    background-color: rgba(59, 130, 246, 0.08);
+    border-radius: 6px;
 }
 
-.product-table th,
-.product-table td {
-    padding: 14px 18px;
-}
-
-.product-table tbody tr:hover {
-    background-color: rgba(59,130,246,0.08);
-}
