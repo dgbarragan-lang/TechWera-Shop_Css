@@ -544,12 +544,12 @@ Móvil: Productos arriba + Sidebar abajo
 | IE 11 | - | No soportado |
 
 ### Características Requeridas
-- ✅ CSS Grid
-- ✅ Flexbox
-- ✅ CSS Transitions
-- ✅ CSS Transforms
-- ✅ CSS Variables
-- ✅ Media Queries
+- CSS Grid
+- Flexbox
+- CSS Transitions
+- CSS Transforms
+- CSS Variables
+- Media Queries
 
 ---
 ## Estadísticas del Proyecto
@@ -679,8 +679,6 @@ INICIO (index.html)
 │
 └─→ Documentación
     ├─→ README.md
-    ├─→ INFORME_REFERENCIA.md
-    └─→ GUIA_VISUAL.md
 ```
 
 ---
