@@ -31,6 +31,13 @@ El sitio incluye:
 - **Carrito de compras** funcional
 - **Diseño responsivo** que se adapta a cualquier dispositivo
 - **Estilos modernos** con efectos visuales profesionales
+- **Repositorio público**: https://github.com/dgbarragan-lang/TechWera-Shop_Css
+
+---
+
+## Objetivo
+
+El objetivo del proyecto es crear una tienda web personal organizada, visualmente atractiva y responsive, usando HTML, CSS y Bootstrap, y mostrando estructuras de datos simulados en JSON y XML para definir el catálogo de productos.
 
 ---
 
@@ -67,7 +74,19 @@ El sitio incluye:
 
 ## Estructura del Proyecto
 
-![alt text](/img/image.png)
+- `index.html`
+- `pages/login.html`
+- `pages/register.html`
+- `pages/cart.html`
+- `css/general.css`
+- `css/index.css`
+- `css/login.css`
+- `css/register.css`
+- `css/cart.css`
+- `data/datos.json`
+- `data/datos.xml`
+- `img/` (imágenes y recursos visuales)
+- `README.md`
 
 ---
 
@@ -79,8 +98,21 @@ El sitio incluye:
 | **CSS3** | Estilos y maquetación | 3 |
 | **Flexbox** | Layouts flexibles | CSS3 |
 | **CSS Grid** | Layouts de cuadrícula | CSS3 |
+| **Bootstrap 5** | Componentes y sistema de grid | 5.3 |
+| **FontAwesome** | Iconografía vectorial | 6.5 |
 | **Git** | Control de versiones | - |
 | **Live Server** | Servidor local de desarrollo | - |
+
+---
+
+## Componentes Bootstrap Utilizados
+
+- **Navbar** básica en la navegación principal y botones de categoría.
+- **Alert** informativa de oferta flash.
+- **Badges** para etiquetas de categoría y conteo de productos.
+- **Input group** en el footer para newsletter.
+- **Grid system** en el footer y en el layout del contenido.
+- **Buttons** y utilidades de espaciado (`d-flex`, `gap`, `fw-bold`).
 
 ---
 

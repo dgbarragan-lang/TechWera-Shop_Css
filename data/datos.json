@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "categoria": "Portátiles",
+    "nombre": "MacBook Pro 16\"",
+    "descripcion": "Laptop profesional con M1 Pro para edición y desarrollo",
+    "precio": 2499.00,
+    "stock": 5,
+    "imagen": "img/Carrito/mac.jpg"
+  },
+  {
+    "id": 2,
+    "categoria": "Portátiles",
+    "nombre": "Dell XPS 15",
+    "descripcion": "Equipo equilibrado para productividad y diseño",
+    "precio": 1899.00,
+    "stock": 8,
+    "imagen": "img/Carrito/dell.jpg"
+  },
+  {
+    "id": 3,
+    "categoria": "Accesorios",
+    "nombre": "Wireless Mouse MX Master",
+    "descripcion": "Ratón inalámbrico ergonómico de alta precisión",
+    "precio": 99.00,
+    "stock": 20,
+    "imagen": "img/Carrito/raton.jpg"
+  },
+  {
+    "id": 4,
+    "categoria": "Accesorios",
+    "nombre": "Mechanical Keyboard RGB",
+    "descripcion": "Teclado mecánico con retroiluminación RGB",
+    "precio": 149.00,
+    "stock": 12,
+    "imagen": "img/Carrito/teclado.jpg"
+  },
+  {
+    "id": 5,
+    "categoria": "Monitores",
+    "nombre": "27\" 4K Monitor",
+    "descripcion": "Monitor 4K para edición y gaming",
+    "precio": 599.00,
+    "stock": 7,
+    "imagen": "img/Carrito/monitor.jpg"
+  },
+  {
+    "id": 6,
+    "categoria": "Accesorios",
+    "nombre": "USB-C Hub 7-in-1",
+    "descripcion": "Adaptador multi-puerto para laptops modernos",
+    "precio": 79.00,
+    "stock": 25,
+    "imagen": "img/Carrito/adaptador.jpg"
+  },
+  {
+    "id": 7,
+    "categoria": "Audio",
+    "nombre": "Gaming Headset Pro",
+    "descripcion": "Auriculares con micrófono y sonido envolvente",
+    "precio": 199.00,
+    "stock": 10,
+    "imagen": "img/Carrito/auriculares.jpg"
+  },
+  {
+    "id": 8,
+    "categoria": "Accesorios",
+    "nombre": "Laptop Stand Aluminum",
+    "descripcion": "Soporte de aluminio para laptops",
+    "precio": 49.00,
+    "stock": 30,
+    "imagen": "img/Carrito/stand.jpg"
+  }
+]

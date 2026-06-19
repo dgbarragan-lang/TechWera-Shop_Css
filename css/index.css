@@ -1,6 +1,6 @@
 /* ============================================================
    BLOQUE 1: SECCIÓN HERO (BIENVENIDA)
-   Estilos de la sección principal con Box Model y Grid.
+    Estilos para la sección de bienvenida.
    ============================================================ */
 
 #hero {
@@ -26,7 +26,7 @@
     text-align: center;
 }
 
-/* GRID: Lista de beneficios con diseño responsivo */
+/* GRID: Lista de beneficios */
 #hero .hero-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -49,7 +49,8 @@
 
 /* ============================================================
    BLOQUE 2: TARJETA SECUNDARIA
-   Estilos de tarjetas reutilizables con Box Model.
+    Estilos para tarjetas de información secundaria.
+     Aplicación de Box Model, Flexbox y Grid.
    ============================================================ */
 
 .card-secondary {
@@ -67,7 +68,9 @@
 
 /* ============================================================
    BLOQUE 3: SECCIÓN DE PRODUCTOS DESTACADOS
-   Estilos para tabla de productos con Box Model.
+    Estilos para la tabla de productos destacados.
+      Aplicación de Box Model, Flexbox y Grid.
+      Diseño responsivo con tablas.
    ============================================================ */
 
 #featured-products {
@@ -78,10 +81,9 @@
 #featured-products h2 {
     color: #93c5fd;
     border-color: #93c5fd;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
-/* Contenedor de la tabla con scroll responsivo */
 #featured-products .product-table {
     overflow-x: auto;
     border-radius: 16px;
@@ -106,6 +108,7 @@
 #featured-products td {
     padding: 14px 18px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    vertical-align: middle;
 }
 
 #featured-products tbody tr {
@@ -116,7 +119,6 @@
     background-color: rgba(59,130,246,0.08);
 }
 
-/* Estilos de imágenes en tabla */
 #featured-products img {
     width: 100px;
     height: 100px;
@@ -125,45 +127,36 @@
     border: 1px solid rgba(59, 130, 246, 0.16);
 }
 
-#featured-products button {
-    width: 100%;
-    padding: 10px 14px;
-    border-radius: 10px;
-    background-color: #2563eb;
-    border: 1px solid #1d4ed8;
-    color: #fff;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-#featured-products button:hover {
-    background-color: #1d4ed8;
-    border-color: #1e40af;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+/* Precio destacado */
+.text-price {
+    color: #60a5fa;
+    font-size: 1.05rem;
 }
 
 /* ============================================================
-   BLOQUE 4: BADGES Y ETIQUETAS
-   Estilos para elementos destacados.
+   BLOQUE 4: BADGES DE CATEGORÍA EN TABLA
+    Estilos para badges de categoría en la tabla de productos.
+     Aplicación de Box Model, Flexbox y Grid.
    ============================================================ */
 
-.badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 12px;
+.badge-cat {
+    display: inline-block;
+    padding: 4px 10px;
     border-radius: 999px;
-    background-color: rgba(59,130,246,0.14);
-    color: #bfdbfe;
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-    border: 1px solid rgba(59, 130, 246, 0.22);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: .02em;
 }
+
+.badge-cat--laptop  { background-color: rgba(99,102,241,0.20); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.35); }
+.badge-cat--acc     { background-color: rgba(16,185,129,0.18); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.32); }
+.badge-cat--monitor { background-color: rgba(14,165,233,0.18); color: #7dd3fc; border: 1px solid rgba(14,165,233,0.32); }
+.badge-cat--audio   { background-color: rgba(245,158,11,0.18); color: #fcd34d; border: 1px solid rgba(245,158,11,0.32); }
 
 /* ============================================================
    BLOQUE 5: BOTONES
-   Estilos primarios y secundarios para botones.
+    Estilos para botones de acción.
+     Aplicación de Box Model, Flexbox y Grid.
    ============================================================ */
 
 .btn-primary {
@@ -175,16 +168,28 @@
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
     font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-primary:hover {
     background-color: #2563eb;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    color: #fff;
+    text-decoration: none;
 }
 
 .btn-primary:active {
     transform: translateY(0);
+}
+
+/* Variante compacta para la tabla */
+.btn-sm-table {
+    padding: 7px 12px;
+    font-size: 0.82rem;
+    border-radius: 8px;
+    width: 100%;
 }
 
 .btn-secondary {
@@ -203,8 +208,41 @@
 }
 
 /* ============================================================
-   BLOQUE 6: NOTAS E INFORMACIÓN
-   Estilos para elementos informativos.
+   BLOQUE 6: BADGE GENERAL (hero, etc.)
+    Estilos para badges generales usados en varias secciones.
+     Aplicación de Box Model, Flexbox y Grid.
+     Diseño responsivo con tablas.
+     Inspiración en badges de Tailwind y Bootstrap.
+     Se pueden usar para categorías, etiquetas, estados, etc.
+     Se pueden extender con clases adicionales para colores específicos.
+     Ejemplo: <span class="badge badge-popular">Popular</span>
+   ============================================================ */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background-color: rgba(59,130,246,0.14);
+    color: #bfdbfe;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    border: 1px solid rgba(59, 130, 246, 0.22);
+}
+
+/* Bootstrap badges (bg-primary, bg-danger, etc.) — no pisar */
+.badge.rounded-pill.bg-primary { background-color: #2563eb !important; color: #fff; border: none; }
+.badge.bg-danger               { background-color: #dc2626 !important; color: #fff; border: none; }
+
+/* ============================================================
+   BLOQUE 7: NOTAS E INFORMACIÓN
+    Estilos para notas informativas, tips, etc.
+     Aplicación de Box Model, Flexbox y Grid.
+     Inspiración en alertas de Tailwind y Bootstrap.
+     Se pueden usar para mensajes de ayuda, tips, información adicional, etc.
+     Ejemplo: <div class="info-note">Nota importante sobre el producto.</div>
+     Se pueden extender con clases adicionales para colores específicos.
    ============================================================ */
 
 #hero .info-note {
@@ -217,3 +255,28 @@
     border-radius: 6px;
 }
 
+/* ============================================================
+   BLOQUE 8: BLOQUES DE CÓDIGO / MUESTRAS DE DATOS
+    Estilos para bloques de código, muestras de datos, etc.
+     Aplicación de Box Model, Flexbox y Grid.
+     Inspiración en estilos de código de Tailwind y Bootstrap.
+     Se pueden usar para mostrar fragmentos de código, datos técnicos, etc.
+     Ejemplo: <pre class="code-sample">Código o datos aquí</pre>
+     Se pueden extender con clases adicionales para colores específicos.
+   ============================================================ */
+
+.code-sample {
+    background-color: #071024;
+    border-radius: 8px;
+    overflow: auto;
+    color: #dbeafe;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.badge-popular {
+    font-size: 0.7rem;
+    padding: 0.35em 0.6em;
+}

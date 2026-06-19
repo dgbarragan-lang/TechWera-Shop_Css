@@ -1,7 +1,6 @@
 /* ============================================================
    BLOQUE 1: CONFIGURACIÓN GENERAL
-   Selector universal, body, fuente, fondo, color e interlineado.
-   Aplicación del Box Model: box-sizing, margin, padding.
+    Estilos globales para toda la página.
    ============================================================ */
 
 * {
@@ -24,9 +23,22 @@ body {
     flex-direction: column;
 }
 
+.site-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
 /* ============================================================
    BLOQUE 2: TÍTULOS, PÁRRAFOS Y ENLACES
-   Estilos para h1, h2, h3, p, a y a:hover.
+   definición de estilos para elementos de texto.
    ============================================================ */
 
 h1 {
@@ -73,38 +85,146 @@ i {
     vertical-align: middle;
 }
 
-a i,
-button i,
-nav i {
-    font-size: 1rem;
-}
-
 /* ============================================================
-   BLOQUE 3: ELEMENTOS SEMÁNTICOS PRINCIPALES
-   Estilos para header, nav, main, section, article, aside y footer.
+   BLOQUE 3: HEADER
+    Estilos para el encabezado y navegación.
    ============================================================ */
 
-header {
+header,
+.navbar-header {
     background-color: #111827;
     padding: 18px 16px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-header > div {
+header > div,
+.navbar-header > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
+header nav,
+.navbar-header nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav[aria-label="Principal"] {
+    width: 100%;
+}
+
+header a,
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #e6eef6;
+    text-decoration: none;
+}
+
+nav[aria-label="Principal"] a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    color: #e6eef6;
+    background-color: rgba(59, 130, 246, 0.18);
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+header a:hover,
+.brand-link:hover {
+    color: #e6eef6;
+    text-decoration: none;
+}
+
+header a img,
+.brand-link img {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: contain;
+    border-radius: 4px !important;
+    border: none !important;
+}
+
+/* Menú de navegación principal */
 nav ul {
     justify-content: center;
 }
+
+nav[aria-label="Principal"] {
+    margin-top: 0;
+}
+
+nav[aria-label="Principal"] ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav[aria-label="Principal"] a.active {
+    background-color: #1d4ed8;
+    color: #fff;
+    border-color: #1e40af;
+}
+
+nav[aria-label="Principal"] a:hover {
+    background-color: #3b82f6;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ============================================================
+   BLOQUE 4: NAV CATEGORÍAS
+    Estilos para la barra de categorías.
+   ============================================================ */
+
+.categories-nav {
+    background-color: #0f1720;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 8px 0;
+}
+
+.btn-cat {
+    background-color: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.30);
+    color: #bfdbfe;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 0.83rem;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+.btn-cat:hover {
+    background-color: rgba(59, 130, 246, 0.28);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ============================================================
+   BLOQUE 5: MAIN Y SECCIONES
+    Estilos para el contenido principal.
+   ============================================================ */
 
 main {
     margin: 0 auto;
     padding: 24px 16px;
     max-width: 1100px;
+    width: 100%;
 }
 
 section,
@@ -115,87 +235,6 @@ aside {
     border-radius: 14px;
     margin-bottom: 24px;
     padding: 20px;
-}
-
-footer {
-    background-color: #111827;
-    padding: 18px 16px;
-    margin-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    text-align: center;
-}
-
-footer > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
-
-footer h4,
-footer p,
-footer a {
-    margin: 0;
-}
-
-/* ============================================================
-   BLOQUE 4: MENÚ DE NAVEGACIÓN
-   Estilos para nav, nav a y nav a:hover.
-   ============================================================ */
-
-nav {
-    margin-top: 12px;
-}
-
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    display: inline-block;
-    padding: 10px 14px;
-    color: #e6eef6;
-    background-color: rgba(59, 130, 246, 0.18);
-    border: 1px solid rgba(59, 130, 246, 0.35);
-    border-radius: 10px;
-}
-
-nav a.active {
-    background-color: #1d4ed8;
-    color: #fff;
-    border-color: #1e40af;
-}
-
-nav a:hover {
-    background-color: #3b82f6;
-    color: #fff;
-}
-
-/* ============================================================
-   BLOQUE 5: CONTENIDO Y SECCIONES
-   Estilos para main, section, article y aside.
-   ============================================================ */
-main ul{
-    display: inline-block;
-}
-main aside,
-main p,
-main div{
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 2px 16px;
-}
-main h1,
-main h2,
-main h3 {
-    padding: 2px 16px;
-    text-align: center;
 }
 
 section {
@@ -210,9 +249,29 @@ aside {
     overflow: hidden;
 }
 
+main ul {
+    display: inline-block;
+}
+
+main aside,
+main p,
+main div {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2px 16px;
+}
+
+main h1,
+main h2,
+main h3 {
+    padding: 2px 16px;
+    text-align: center;
+}
+
 /* ============================================================
    BLOQUE 6: IMÁGENES
-   Estilos para img.
+    Estilos para imágenes y multimedia.
    ============================================================ */
 
 img {
@@ -234,7 +293,7 @@ header img {
 
 /* ============================================================
    BLOQUE 7: LISTAS
-   Estilos para ul, ol y li.
+    Estilos para listas ordenadas y desordenadas.
    ============================================================ */
 
 ul,
@@ -251,7 +310,7 @@ li {
 
 /* ============================================================
    BLOQUE 8: FORMULARIOS
-   Estilos para form, label, input, textarea, select y button.
+    Estilos para formularios, inputs y botones.
    ============================================================ */
 
 form {
@@ -277,6 +336,26 @@ select {
     color: #e6eef6;
 }
 
+/* Newsletter input adaptado */
+.newsletter-input {
+    background-color: rgba(255,255,255,0.07) !important;
+    border: 1px solid rgba(255,255,255,0.15) !important;
+    color: #e6eef6 !important;
+    border-radius: 8px 0 0 8px !important;
+}
+.newsletter-input::placeholder { color: #94a3b8; }
+.newsletter-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59,130,246,0.4);
+    border-color: #3b82f6 !important;
+}
+
+.newsletter-btn {
+    border-radius: 0 8px 8px 0 !important;
+    padding: 6px 14px !important;
+    font-size: 0.85rem !important;
+}
+
 textarea {
     min-height: 120px;
     resize: vertical;
@@ -297,7 +376,8 @@ button:hover {
 }
 
 /* ============================================================
-   Estilos para table, tr, th y td.
+   BLOQUE 9: TABLAS
+    Estilos para tablas de productos, resúmenes, etc.
    ============================================================ */
 
 table {
@@ -326,7 +406,7 @@ td {
 
 /* ============================================================
    BLOQUE 10: UTILITY CLASSES
-   Clases reutilizables para margenes, paddings, gaps.
+    Clases de utilidad para espaciado, flexbox, etc.
    ============================================================ */
 
 .container {
@@ -370,53 +450,57 @@ td {
 .mb-sm { margin-bottom: 8px; }
 .mb-md { margin-bottom: 14px; }
 .mb-lg { margin-bottom: 20px; }
-   Estilos para table, thead, tbody, tr, th y td.
-   ============================================================ */
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-}
-
-thead {
-    background-color: rgba(59, 130, 246, 0.12);
-}
-
-th,
-td {
-    padding: 12px 14px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    text-align: left;
-}
-
-thead th {
-    color: #dbeafe;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-tbody tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.03);
-}
 
 /* ============================================================
-   BLOQUE 10: PIE DE PÁGINA
-   Estilos para footer, footer p y footer address.
+   BLOQUE 11: FOOTER
+    Estilos para el pie de página.
    ============================================================ */
+
+footer {
+    background-color: #111827;
+    padding: 36px 0 16px;
+    margin-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+footer h4 {
+    color: #e6eef6;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
 
 footer p,
 footer address {
-    text-align: center;
+    text-align: left;
     color: #94a3b8;
-    font-size: 0.95rem;
-    margin: 0;
+    font-size: 0.93rem;
+    margin: 0 0 6px;
+}
+
+footer a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer a:hover {
+    color: #e6eef6;
+    text-decoration: none;
+}
+
+footer .container > p {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.88rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 14px;
+    margin-top: 8px;
 }
 
 /* ============================================================
-   BLOQUE 11: MULTIMEDIA AVANZADA
-   Estilos para figure, figcaption, video, audio e iframe.
+   BLOQUE 12: MULTIMEDIA AVANZADA
+    Estilos para figuras, videos, audio, iframes.
    ============================================================ */
 
 figure {
@@ -458,8 +542,8 @@ iframe {
 }
 
 /* ============================================================
-   BLOQUE 12: FORMULARIOS AVANZADOS
-   Estilos para inputs especiales, focus y controles reset.
+   BLOQUE 13: FORMULARIOS AVANZADOS
+    Estilos para inputs específicos, estados de validación, etc.
    ============================================================ */
 
 input[type="checkbox"],
@@ -473,11 +557,6 @@ input[type="time"] {
     max-width: 320px;
     padding: 10px;
     font-size: 1rem;
-}
-
-textarea {
-    min-height: 120px;
-    resize: vertical;
 }
 
 select {
@@ -509,8 +588,8 @@ textarea:required {
 }
 
 /* ============================================================
-   BLOQUE 13: TABLAS AVANZADAS
-   Estilos adicionales para caption, hover y filas pares.
+   BLOQUE 14: TABLAS AVANZADAS
+    Estilos para tablas con paginación, ordenables, etc.
    ============================================================ */
 
 caption {
@@ -536,8 +615,8 @@ tr:nth-child(even) {
 }
 
 /* ============================================================
-   BLOQUE 14: DETALLE, RESUMEN Y AVANCE
-   Estilos para details, summary, progress y meter.
+   BLOQUE 15: DETAILS, PROGRESS, METER
+    Estilos para elementos interactivos y de progreso.
    ============================================================ */
 
 details {
@@ -556,7 +635,7 @@ summary {
     cursor: pointer;
 }
 
-progress{
+progress {
     width: 100%;
     max-width: 260px;
     height: 26px;
@@ -573,8 +652,8 @@ meter {
 }
 
 /* ============================================================
-   BLOQUE 15: TEXTO TÉCNICO
-   Estilos para code, pre y kbd.
+   BLOQUE 16: TEXTO TÉCNICO
+    Estilos para code, pre, kbd.
    ============================================================ */
 
 code,
@@ -596,27 +675,46 @@ pre {
 }
 
 /* ============================================================
-   BLOQUE 16: RESPONSIVIDAD
-   Ajustes para pantallas de 700px o menos.
+   BLOQUE 17: ALERTA BOOTSTRAP — ADAPTACIÓN AL TEMA OSCURO
+    Estilos para alertas informativas.
+   ============================================================ */
+
+.alert-info {
+    background-color: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.30);
+    color: #bfdbfe;
+}
+
+.alert-info .btn-close {
+    filter: invert(1) brightness(0.8);
+}
+
+.alert-info code {
+    color: #93c5fd;
+    background-color: rgba(59,130,246,0.15);
+}
+
+/* ============================================================
+   BLOQUE 18: RESPONSIVIDAD
+    Ajustes para pantallas pequeñas.
    ============================================================ */
 
 @media (max-width: 700px) {
-    header > div,
-    footer > div {
+    .navbar-header .d-flex {
+        flex-wrap: wrap;
+    }
+
+    #mainNav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #mainNav ul {
         flex-direction: column;
         align-items: stretch;
     }
 
-    header > div {
-        gap: 12px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    nav a {
+    #mainNav a {
         width: 100%;
         text-align: center;
     }
@@ -637,6 +735,10 @@ pre {
     header img {
         width: auto;
         max-width: 100%;
+    }
+
+    header img {
+        max-height: 36px;
     }
 
     table,
@@ -680,6 +782,10 @@ pre {
     }
 
     footer {
+        text-align: center;
+    }
+
+    footer p {
         text-align: center;
     }
 }

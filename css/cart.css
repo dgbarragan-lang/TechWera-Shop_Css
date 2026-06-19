@@ -11,6 +11,7 @@
     grid-template-columns: 1fr;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 #cart-header {
@@ -313,4 +314,58 @@
 
 #cart-footer button.btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ============================================================
+   BLOQUE 6: RESPONSIVE ADAPTIVE
+    Ajustes para pantallas pequeñas.
+   ============================================================ */
+
+@media (max-width: 640px) {
+    #cart-page {
+        padding: 18px 12px;
+    }
+
+    #cart-header {
+        padding: 18px;
+    }
+
+    #cart-location {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .cart-product {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .cart-product img {
+        width: 100%;
+        max-width: 240px;
+        justify-self: center;
+    }
+
+    .cart-product div:nth-child(2) {
+        gap: 10px;
+    }
+
+    .quantity-control {
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .cart-product p:last-of-type {
+        margin-top: 12px;
+    }
+
+    .cart-summary {
+        position: static;
+        top: auto;
+    }
+
+    #cart-footer button {
+        width: 100%;
+    }
 }
