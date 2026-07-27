@@ -97,6 +97,21 @@ header,
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.cart-badge {
+    display: inline-flex;
+    min-width: 22px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    padding: 0 8px;
+    border-radius: 999px;
+    background-color: #2563eb;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
 header > div,
 .navbar-header > div {
     display: flex;

@@ -102,7 +102,7 @@
    Distribución con Flexbox de dos columnas.
    ============================================================ */
 
-#cart-page > div:not(#cart-header) {
+#cart-page > *:not(#cart-header) {
     display: grid;
     grid-template-columns: 1fr 320px;
     gap: 24px;
@@ -111,7 +111,7 @@
 
 /* Responsive: En pantallas pequeñas, columna única */
 @media (max-width: 768px) {
-    #cart-page > div:not(#cart-header) {
+    #cart-page > *:not(#cart-header) {
         grid-template-columns: 1fr;
     }
 }

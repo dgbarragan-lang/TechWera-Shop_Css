@@ -67,23 +67,11 @@
           </div>
         </div>
         <br />
-        <div>
-          <section>
-            <article class="cart-product">
-              <div>
-                <img src="../img/Carrito/dell.jpg" alt="Dell XPS 15" />
-              </div>
-              <div>
-                <h3>Dell XPS 15</h3>
-                <p>Portátiles</p>
-                <p>$1899</p>
-              </div>
-              <div aria-label="Cantidad" class="quantity-control">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-              </div>
-            </article>
+        <div id="cart-content">
+          <section id="cart-items">
+            <p class="empty-cart-message">
+              Tu carrito está vacío. Agrega productos desde la tienda.
+            </p>
           </section>
 
           <aside class="cart-summary">
@@ -91,19 +79,19 @@
             <dl>
               <div>
                 <dt>Subtotal</dt>
-                <dd>$1899.00</dd>
+                <dd id="cartSubtotal">$0.00</dd>
               </div>
               <div>
                 <dt>Impuesto (10%)</dt>
-                <dd>$189.90</dd>
+                <dd id="cartTax">$0.00</dd>
               </div>
               <div>
                 <dt>Total</dt>
-                <dd class="total">$2088.90</dd>
+                <dd id="cartTotal" class="total">$0.00</dd>
               </div>
             </dl>
             <div id="cart-footer">
-              <button>Proceder al pago</button>
+              <button id="cartCheckout">Proceder al pago</button>
             </div>
           </aside>
         </div>
@@ -115,6 +103,9 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/cart.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"

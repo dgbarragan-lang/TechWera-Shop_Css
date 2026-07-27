@@ -37,7 +37,8 @@
               </li>
               <li>
                 <a href="pages/cart.html">
-                  <i class="fa-solid fa-cart-shopping"></i> Carrito
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  Carrito <span id="cartCount" class="cart-badge">0</span>
                 </a>
               </li>
               <li>
@@ -122,150 +123,145 @@
 
         <!-- ── PRODUCTOS DESTACADOS ── -->
         <section id="featured-products" aria-labelledby="featured-title">
-          <div class="d-flex align-items-center justify-content-between mb-3">
-            <h2 id="featured-title" class="mb-0">Productos destacados</h2>
-            <span class="badge rounded-pill bg-primary">8 productos</span>
+          <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <div>
+              <h2 id="featured-title" class="mb-1">Productos disponibles</h2>
+              <p class="section-description">Carga dinámica desde JSON + filtros, ordenamiento y operaciones CRUD.</p>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <button id="btn-toggle-form" class="btn-primary">Nuevo producto</button>
+              <button id="btn-reset-data" class="btn-secondary">Restaurar datos</button>
+            </div>
           </div>
+
+          <div class="card-secondary controls-grid mb-4">
+            <div class="control-item">
+              <label for="searchInput">Buscar productos</label>
+              <input id="searchInput" type="search" placeholder="Nombre, categoría, descripción" />
+            </div>
+            <div class="control-item">
+              <label for="categoryFilter">Filtrar por categoría</label>
+              <select id="categoryFilter">
+                <option value="all">Todas las categorías</option>
+              </select>
+            </div>
+            <div class="control-item">
+              <label for="stockFilter">Disponibilidad</label>
+              <select id="stockFilter">
+                <option value="all">Todos los estados</option>
+                <option value="disponible">Disponible</option>
+                <option value="agotado">Agotado</option>
+              </select>
+            </div>
+            <div class="control-item">
+              <label for="sortSelect">Ordenar por</label>
+              <select id="sortSelect">
+                <option value="latest">Fecha reciente</option>
+                <option value="priceAsc">Precio menor a mayor</option>
+                <option value="priceDesc">Precio mayor a menor</option>
+                <option value="nameAsc">Nombre A-Z</option>
+                <option value="nameDesc">Nombre Z-A</option>
+              </select>
+            </div>
+            <div class="control-item result-count">
+              <span id="resultCount">20 productos</span>
+            </div>
+          </div>
+
+          <div id="product-stats" class="stats-grid mb-4"></div>
+
+          <div id="product-form-section" class="card-secondary mb-4 d-none">
+            <h3 id="product-form-title">Agregar nuevo producto</h3>
+            <form id="productForm" class="product-form">
+              <input type="hidden" id="productId" />
+              <div class="grid-form">
+                <div>
+                  <label for="productName">Nombre</label>
+                  <input id="productName" type="text" required />
+                </div>
+                <div>
+                  <label for="productCategory">Categoría</label>
+                  <select id="productCategory" required></select>
+                </div>
+                <div>
+                  <label for="productPrice">Precio</label>
+                  <input id="productPrice" type="number" step="0.01" min="0" required />
+                </div>
+                <div>
+                  <label for="productStock">Stock</label>
+                  <input id="productStock" type="number" min="0" required />
+                </div>
+                <div>
+                  <label for="productState">Estado</label>
+                  <select id="productState" required>
+                    <option value="disponible">Disponible</option>
+                    <option value="agotado">Agotado</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="productDate">Fecha de registro</label>
+                  <input id="productDate" type="date" required />
+                </div>
+                <div class="full-width">
+                  <label for="productDescription">Descripción</label>
+                  <textarea id="productDescription" rows="3" required></textarea>
+                </div>
+                <div class="full-width">
+                  <label for="productImage">Ruta de imagen</label>
+                  <input id="productImage" type="text" placeholder="img/Carrito/nombre.jpg" required />
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn-primary">Guardar producto</button>
+                <button type="button" id="btnCancelProduct" class="btn-secondary">Cancelar</button>
+              </div>
+            </form>
+          </div>
+
           <div class="product-table">
             <table>
               <thead>
                 <tr>
                   <th>Imagen</th>
-                  <th>Categoría</th>
                   <th>Producto</th>
+                  <th>Categoría</th>
                   <th>Precio</th>
-                  <th>Acción</th>
+                  <th>Stock</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td><img src="img/Carrito/mac.jpg" alt="MacBook Pro" /></td>
-                  <td>
-                    <span class="badge-cat badge-cat--laptop">Portátiles</span>
-                  </td>
-                  <td>MacBook Pro 16"</td>
-                  <td class="fw-bold text-price">$2499</td>
-                  <td>
-                    <button class="btn-primary btn-sm-table">
-                      <i class="fa-solid fa-cart-plus me-1"></i>Añadir
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td><img src="img/Carrito/dell.jpg" alt="Dell XPS" /></td>
-                  <td>
-                    <span class="badge-cat badge-cat--laptop">Portátiles</span>
-                  </td>
-                  <td>Dell XPS 15</td>
-                  <td class="fw-bold text-price">$1899</td>
-                  <td>
-                    <button class="btn-primary btn-sm-table">
-                      <i class="fa-solid fa-cart-plus me-1"></i>Añadir
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="img/Carrito/raton.jpg" alt="Wireless Mouse" />
-                  </td>
-                  <td>
-                    <span class="badge-cat badge-cat--acc">Accesorios</span>
-                  </td>
-                  <td>Wireless Mouse MX Master</td>
-                  <td class="fw-bold text-price">$99</td>
-                  <td>
-                    <button class="btn-primary btn-sm-table">
-                      <i class="fa-solid fa-cart-plus me-1"></i>Añadir
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="img/Carrito/teclado.jpg"
-                      alt="Mechanical Keyboard"
-                    />
-                  </td>
-                  <td>
-                    <span class="badge-cat badge-cat--acc">Accesorios</span>
-                  </td>
-                  <td>
-                    Mechanical Keyboard RGB
-                    <span class="badge badge-popular ms-1">Popular</span>
-                  </td>
-                  <td class="fw-bold text-price">$149</td>
-                  <td>
-                    <button class="btn-primary btn-sm-table">
-                      <i class="fa-solid fa-cart-plus me-1"></i>Añadir
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="img/Carrito/monitor.jpg" alt="27 inch monitor" />
-                  </td>
-                  <td>
-                    <span class="badge-cat badge-cat--monitor">Monitores</span>
-                  </td>
-                  <td>27" 4K Monitor</td>
-                  <td class="fw-bold text-price">$599</td>
-                  <td>
-                    <button class="btn-primary btn-sm-table">
-                      <i class="fa-solid fa-cart-plus me-1"></i>Añadir
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="img/Carrito/adaptador.jpg" alt="USB-C Hub" />
-                  </td>
-                  <td>
-                    <span class="badge-cat badge-cat--acc">Accesorios</span>
-                  </td>
-                  <td>USB-C Hub 7-in-1</td>
-                  <td class="fw-bold text-price">$79</td>
-                  <td>
-                    <button class="btn-primary btn-sm-table">
-                      <i class="fa-solid fa-cart-plus me-1"></i>Añadir
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="img/Carrito/auriculares.jpg"
-                      alt="Gaming Headset"
-                    />
-                  </td>
-                  <td><span class="badge-cat badge-cat--audio">Audio</span></td>
-                  <td>Gaming Headset Pro</td>
-                  <td class="fw-bold text-price">$199</td>
-                  <td>
-                    <button class="btn-primary btn-sm-table">
-                      <i class="fa-solid fa-cart-plus me-1"></i>Añadir
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <img src="img/Carrito/stand.jpg" alt="Laptop Stand" />
-                  </td>
-                  <td>
-                    <span class="badge-cat badge-cat--acc">Accesorios</span>
-                  </td>
-                  <td>Laptop Stand Aluminum</td>
-                  <td class="fw-bold text-price">$49</td>
-                  <td>
-                    <button class="btn-primary btn-sm-table">
-                      <i class="fa-solid fa-cart-plus me-1"></i>Añadir
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
+              <tbody id="productTableBody"></tbody>
             </table>
+          </div>
+
+          <div class="chart-card card-secondary mt-4">
+            <h3>Productos por categoría</h3>
+            <canvas id="categoryChart" width="100" height="40"></canvas>
           </div>
         </section>
       </main>
+
+      <section id="external-api" class="container mb-4">
+        <div class="card-secondary weather-section">
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+            <div>
+              <h2>Clima en ciudades seleccionadas</h2>
+              <p class="section-description">Consulta el clima actual mediante la API Open-Meteo.</p>
+            </div>
+            <div class="weather-buttons d-flex flex-wrap gap-2">
+              <button class="btn-secondary weather-btn" data-lat="-0.18" data-lng="-78.47">Quito</button>
+              <button class="btn-secondary weather-btn" data-lat="-2.17" data-lng="-79.90">Guayaquil</button>
+              <button class="btn-secondary weather-btn" data-lat="-1.03" data-lng="-79.46">Quevedo</button>
+              <button class="btn-secondary weather-btn" data-lat="-0.25" data-lng="-79.15">Santo Domingo</button>
+            </div>
+          </div>
+          <div id="weatherCard" class="weather-card mt-4">
+            <p class="text-muted">Selecciona una ciudad para mostrar el clima.</p>
+          </div>
+        </div>
+      </section>
+</main>
 
       <!-- ── SECCIÓN DATOS JSON / XML ── -->
       <section id="data-samples" class="container">
@@ -366,6 +362,14 @@
       </footer>
     </div>
 
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Toastify -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!-- App JS -->
+    <script src="js/main.js"></script>
     <!-- Bootstrap JS (bundle con Popper) -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
