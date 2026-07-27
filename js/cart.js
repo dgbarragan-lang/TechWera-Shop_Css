@@ -21,6 +21,11 @@ const getCategories = () => {
   return stored ? JSON.parse(stored) : [];
 };
 
+const getLoggedUser = () => {
+  const stored = localStorage.getItem('techwear_logged_user');
+  return stored ? JSON.parse(stored) : null;
+};
+
 const mapCategoryName = (categoriaId) => {
   const categorias = getCategories();
   const categoria = categorias.find((cat) => cat.id === Number(categoriaId));
@@ -144,6 +149,23 @@ const initCartPage = () => {
     const cart = getCart();
     if (!cart.length) {
       Swal.fire({ icon: 'info', title: 'Carrito vacío', text: 'Agrega productos antes de proceder al pago.' });
+      return;
+    }
+
+    const user = getLoggedUser();
+    if (!user) {
+      const loginResult = await Swal.fire({
+        title: 'Necesitas iniciar sesión',
+        html: 'Para realizar la compra debes iniciar sesión. ¿Deseas ir a la página de ingreso?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Ir a iniciar sesión',
+        cancelButtonText: 'Cancelar'
+      });
+
+      if (loginResult.isConfirmed) {
+        window.location.href = 'login.html';
+      }
       return;
     }
 
